@@ -1,0 +1,15 @@
+*** Variables ***
+# variable names can contain spaces
+${BROWSER}		chrome
+${URL}			https://vaccine-haven.herokuapp.com/
+${NAME}         Chanathip
+${SURNAME}      Thumkanon
+${CITIZENID}   	9621054665093
+${BIRTHDATE}    01212001
+${OCCUPPATION}  Student
+${PHONENUMBER}  0909316420
+${ADDRESS}    	72/243 Ramkamhaeng 178 rd. Minburi Bangkok Thailand
+${EMAIL}    	chanathip.thu@ku.th
+${PASSWORD}		nopassword
+${SITE}         OGYHSite
+${VACCINE}      Sinopharm
