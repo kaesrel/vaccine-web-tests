@@ -34,8 +34,11 @@ Input information and sign up
 Check that registration is successful
     #  check that the user is redirected to home page
 	Wait Until Page Contains Element    xpath://*[@id="splash-img"]/div/div/h1
-
-
-
-
+	Click Element    id:nav__info__link
+    Wait Until Page Contains Element    id:citizen_id
+	Input Text    id:citizen_id    ${CITIZENID}
+	Click Button    id:info__btn
+	Wait Until Page Contains Element    xpath://html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div[2]
+	${citizen_id}=    Get Element Attribute    xpath://html/body/div[2]/div/div[2]/div[1]/div/div/div[3]/div[2]/div[2]    innerHTML    
+	Should Be Equal As Strings    ${citizen_id}    ${CITIZENID}
 

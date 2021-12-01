@@ -48,7 +48,13 @@ Input information and reserve a vaccine
 Check that reservation is successful
     #  check that the user is redirected to home page
 	Wait Until Page Contains Element    xpath://*[@id="splash-img"]/div/div/h1
-
+    Click Element    id:nav__info__link
+    Wait Until Page Contains Element    id:citizen_id
+	Input Text    id:citizen_id    ${CITIZENID}
+	Click Button    id:info__btn
+	Wait Until Page Contains Element   id:cancel__btn
+    ${vaccine_name}=    Get Element Attribute    id:reserve_vaccine_value    innerHTML
+	Should Be Equal As Strings    ${vaccine_name}    ${VACCINE} 
 
 
 Input citizen id and go to Citizen Info Page
